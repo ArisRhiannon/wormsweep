@@ -1,0 +1,43 @@
+{
+ "id": "teampcp-litellm-2026-03",
+ "title": "TeamPCP: litellm / telnyx PyPI compromise (Mar 2026)",
+ "date": "2026-03-24",
+ "sources": [
+  "https://securitylabs.datadoghq.com/articles/litellm-compromised-pypi-teampcp-supply-chain-campaign/",
+  "https://github.com/pypa/advisory-database/blob/main/vulns/litellm/PYSEC-2026-2.yaml"
+ ],
+ "notes": "Python packages and host indicators only. The campaign's npm, Docker, GitHub Action and OpenVSX indicators are not in this pack yet.",
+ "packages": {
+  "pypi": {
+   "litellm": [
+    "1.82.7",
+    "1.82.8"
+   ],
+   "telnyx": [
+    "4.87.1",
+    "4.87.2"
+   ]
+  }
+ },
+ "files": [
+  {
+   "name": "litellm_init.pth",
+   "severity": "high",
+   "where": "site-packages"
+  }
+ ],
+ "install_scripts": [],
+ "strings": [
+  "models.litellm.cloud",
+  "checkmarx.zone",
+  "tdtqy-oyaaa-aaaae-af2dq-cai.raw.icp0.io",
+  "aquasecurtiy.org",
+  "tpcp.tar.gz"
+ ],
+ "home_paths": [
+  ".config/sysmon/sysmon.py",
+  ".config/systemd/user/sysmon.service",
+  "/tmp/pglog",
+  "/tmp/.pg_state"
+ ]
+}

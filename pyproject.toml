@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wormsweep"
+version = "0.1.0"
+description = "Offline IOC sweep for npm and PyPI worms (Shai-Hulud/ChainDrop, TeamPCP litellm): compromised versions in lockfiles and installs, dropper files, marker strings, persistence paths."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Aris Rhiannon" }]
+keywords = ["ioc", "shai-hulud", "npm-worm", "supply-chain-security", "incident-response", "litellm", "pypi", "lockfile", "malware-detection", "devsecops"]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ArisRhiannon/wormsweep"
+
+[project.scripts]
+wormsweep = "wormsweep.cli:main"
+
+[tool.setuptools]
+packages = ["wormsweep"]
+
+[tool.setuptools.package-data]
+wormsweep = ["packs/*.json"]
